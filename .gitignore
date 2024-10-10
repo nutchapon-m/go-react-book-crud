@@ -1,0 +1,7 @@
+**/.vscode
+**/*.code-workspace
+**/Dockerfile
+**/dockerfile
+**/*compose.y*ml
+**/data
+**/.env
