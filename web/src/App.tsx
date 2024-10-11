@@ -29,6 +29,7 @@ const FormCommand: FC<FormCommandProps> = ({
   )
 }
 
+const hostname = "localhost"
 
 interface Book {
   id: number
@@ -40,14 +41,14 @@ interface Book {
 function getBooks() {
   return axios.request({
     method: 'get',
-    url: "http://localhost:8080/books",
+    url: `http://${hostname}:8080/books`,
   })
 }
 
 async function deleteBook(id: number) {
   return axios.request({
     method: 'delete',
-    url: `http://localhost:8080/book?id=${id}`,
+    url: `http://${hostname}:8080/book?id=${id}`,
   })
 }
 
@@ -110,7 +111,7 @@ function App() {
 
     axios.request({
       method: "post",
-      url: "http://localhost:8080/book",
+      url: `http://${hostname}:8080/book`,
       data: book
     })
     .then((res)=>{
@@ -127,7 +128,7 @@ function App() {
     event.preventDefault()
     axios.request({
       method: "patch",
-      url: "http://localhost:8080/book",
+      url: `http://${hostname}:8080/book`,
       data: editBook
     })
     .then((res)=>{

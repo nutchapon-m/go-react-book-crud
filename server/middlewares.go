@@ -20,6 +20,8 @@ func NewCorsMiddleWare() func(*fiber.Ctx) error {
 			"http://localhost:51160",
 			"http://localhost:8000",
 			"http://localhost:5173",
+			"http://localhost:3001",
+			"http://react-web:3001",
 		}, ","),
 		AllowMethods: strings.Join([]string{
 			fiber.MethodGet,

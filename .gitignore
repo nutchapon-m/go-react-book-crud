@@ -5,3 +5,4 @@
 **/*compose.y*ml
 **/data
 **/.env
+**run.sh
